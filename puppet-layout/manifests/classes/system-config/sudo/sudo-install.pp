@@ -8,3 +8,4 @@ class sudo-install
   }
 
   exec { "/usr/sbin/sudo-install": }
+}
