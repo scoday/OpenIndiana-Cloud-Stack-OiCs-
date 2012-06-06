@@ -1,7 +1,7 @@
 #!/usr/bin/ruby
-
-  dest = "#{File.dirname(__FILE__)}/../build"
-  pkg = "sudo"
+# Just to work around puppet's Solaris support.
+#
+   pkg = "sudo"
 
   [ "pkg install #{pkg}" ].each do |command|
     puts command
