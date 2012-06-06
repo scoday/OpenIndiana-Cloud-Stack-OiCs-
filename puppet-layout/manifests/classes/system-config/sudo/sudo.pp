@@ -7,12 +7,8 @@ class sudo
     source 	=> "puppet:///modules/sudo/sudo-install",
   }
 
-  package { "security/sudo": ensure => present }
-  service
-  {
-    sudo:
-      subscribe => File["/etc/sudoers"];
-  }
+  exec { "/usr/sbin/sudo-install": }
+
   file
   {
     "/etc/sudoers":
@@ -21,5 +17,11 @@ class sudo
       group  => root,
       source => "puppet:///modules/sudo/sudoers",
       require => Package["security/sudo"];
+  }
+
+  service
+  {
+    sudo:
+      subscribe => File["/etc/sudoers"];
   }
 }
