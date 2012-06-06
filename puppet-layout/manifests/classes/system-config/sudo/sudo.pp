@@ -7,6 +7,8 @@ class sudo
     source 	=> "puppet:///modules/sudo/sudo-install",
   }
 
+  exec { "/usr/sbin/sudo-install": }
+
   file
   {
     "/etc/sudoers":
