@@ -1,0 +1,9 @@
+#!/bin/bash
+# Bounce apache and verify in OI
+#
+echo "Restarting the Apache2 Process. This will display svcs -xv to verify."
+/usr/sbin/svcadm disable /network/http
+svcs -xv /network/http
+read -p "Press [Enter] key to enable and start Apache. The svcs -xv will display."
+/usr/sbin/svcadm enable /network/http
+svcs -xv /network/http

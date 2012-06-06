@@ -1,0 +1,9 @@
+#!/usr/bin/ruby
+#
+#  dest = "#{File.dirname(__FILE__)}/../build"
+  pkg = "sudo"
+
+  [ "pkg install #{pkg}" ].each do |command|
+    puts command
+    system(command)
+  end
