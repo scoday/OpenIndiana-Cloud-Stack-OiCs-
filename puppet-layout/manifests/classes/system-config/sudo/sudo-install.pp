@@ -1,4 +1,4 @@
-class sudo
+class sudo-install
 {
   file { "/usr/sbin/sudo-install":
     mode        => 777,
