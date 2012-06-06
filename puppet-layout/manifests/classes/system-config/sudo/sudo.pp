@@ -7,7 +7,6 @@ class sudo
     source 	=> "puppet:///modules/sudo/sudo-install",
   }
 
-  package { "security/sudo": ensure => present }
   service
   {
     sudo:
