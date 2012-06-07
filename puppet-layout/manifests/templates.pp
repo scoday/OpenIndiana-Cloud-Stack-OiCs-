@@ -6,6 +6,6 @@
 
 node basenode {
     include sudo
-    include zumicloud-basenode
-    include sudo-install
+#    include sudo-install
+     
 }
