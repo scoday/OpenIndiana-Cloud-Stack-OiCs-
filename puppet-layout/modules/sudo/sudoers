@@ -1,5 +1,4 @@
 ## User privilege specification
 ##
 root ALL=(ALL) ALL
-scoday ALL=(ALL) NOPASSWD: ALL
-
+user ALL=(ALL) NOPASSWD: ALL
